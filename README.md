@@ -1,4 +1,5 @@
 # BLOG-WEBSITE
+![Screenshot (36)](https://user-images.githubusercontent.com/78679487/209429516-58307b27-38a3-4486-8c67-e942efa045e1.png)
 
 # Getting Started with Create React App
 
