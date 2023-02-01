@@ -8,6 +8,7 @@ const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 dotenv.config();
 app.use(express.json());
@@ -39,6 +40,15 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
+// app.use(
+//   '/api',
+//   createProxyMiddleware({
+//     // 👇️ make sure to update your target
+//     target: 'http://localhost:5000',
+//     changeOrigin: true,
+//   }),
+// );
+
 mongoose.set("debug", true);
 mongoose.set("strictQuery", false);
 
