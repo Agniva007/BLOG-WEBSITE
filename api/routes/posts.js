@@ -70,6 +70,7 @@ router.get("/:id", async (req, res) => {
 //GET ALL POSTS
 router.get("/", async (req, res) => {
   const username = req.query.user;
+  console.log(username);
   const catName = req.query.cat;
   try {
     let posts;
